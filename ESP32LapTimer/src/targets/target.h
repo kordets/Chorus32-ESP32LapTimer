@@ -23,6 +23,8 @@
   #include "config_ttgo_lora_v1.h"
 #elif BOARD==BOARD_WROOM
   #include "config_wroom.h"
+#elif BOARD==BOARD_TTGO_ESP32_OLED_BATTERY
+  #include "config_ttgo_esp32_oled_battery.h"
 #else
   #error "Unknown board!"
 #endif

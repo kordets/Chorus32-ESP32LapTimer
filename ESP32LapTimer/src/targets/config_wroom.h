@@ -29,9 +29,9 @@
 #define I2C_SDA 23
 #define I2C_SCL 22
 
-// #ifdef OLED
-// #undef OLED
-// #endif
+#ifdef OLED
+#undef OLED
+#endif
 
 // enable arduino ota by default, since there is no USB connector on this board
 #ifndef USE_ARDUINO_OTA

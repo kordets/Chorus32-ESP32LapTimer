@@ -29,14 +29,15 @@
 #include "TimerWebServer.h"
 #include "Utils.h"
 
+//#include "targets/config_ttgo_esp32_oled_battery.h"
+
 static uint8_t oledRefreshTime = 50;
 static uint32_t last_input_ms = 0;
 static bool display_standby_status = false;
 
 static Timer oledTimer = Timer(oledRefreshTime);
 
-//static SSD1306 display(0x3c, 21, 22);  // 21 and 22 are default pins
-static SSD1306 display(0x3c, 5, 4);  // 21 and 22 are default pins
+static SSD1306 display(0x3c, I2C_SDA, I2C_SCL);  // I2C Address = 0x3c or 0x3d, default i2c pins 21 and 22
 
 typedef struct oled_page_s {
   void* data;

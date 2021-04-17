@@ -44,3 +44,6 @@
 #define ADC4_GPIO 33
 #define ADC5_GPIO 32
 #define ADC6_GPIO 35
+
+#define I2C_SDA 21
+#define I2C_SCL 22
